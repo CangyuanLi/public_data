@@ -158,7 +158,6 @@ def main():
         .rename(
             {
                 "001": "total",
-                "002": "hispanic",
                 "003": "nh_white",
                 "004": "nh_black",
                 "005": "nh_aian",
@@ -166,6 +165,7 @@ def main():
                 "007": "nh_hpi",
                 "008": "nh_other",
                 "009": "nh_multiracial",
+                "012": "hispanic",
             }
         )
         .to_pandas()
@@ -175,7 +175,7 @@ def main():
     # 0 when there is another non-null value but to return null when all are null.
     # Polars does not have this option.
 
-    df["nh_hpi"] = df["nh_asian"] + df["nh_hpi"]
+    df["nh_api"] = df["nh_asian"] + df["nh_hpi"]
     df = df[
         [
             "zcta5",

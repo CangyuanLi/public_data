@@ -18,7 +18,7 @@ vars <- vars %>%
 # 
 vars <- tidycensus::load_variables(year = 2019, dataset = "acs5")
 vars <- vars %>%
-  dplyr::filter(stringr::str_detect(name, "B01001"))
+  dplyr::filter(stringr::str_detect(name, "B03002"))
 # When getting data from the decennial census by "tract" or "block group", the state
 # must be specified
 
