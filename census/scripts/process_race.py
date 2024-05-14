@@ -186,6 +186,7 @@ def main():
             "nh_black",
             "nh_aian",
             "nh_asian",
+            "nh_api",
             "nh_hpi",
             "nh_other",
             "nh_multiracial",
